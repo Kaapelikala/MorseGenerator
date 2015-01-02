@@ -54,7 +54,7 @@ public class DisplayTranslationActivity extends ActionBarActivity {
             Log.i("info", debug);
             System.out.println(debug);
             //if the character can be a number or letter.
-            if (character>=48||character<=90)
+            if (character>=48&&character<=90)
             {
                 //check if number.
                 if (character<=57)
@@ -69,12 +69,14 @@ public class DisplayTranslationActivity extends ActionBarActivity {
 
                 }
 
+
                 //if not the last character, add a space.
                 if (i<translate.length()-1)
                 {
-                    morsecode=morsecode+" ";
+                    morsecode=morsecode+' ';
                 }
             }
+            //morsecode=morsecode+' ';
         }
 
         setContentView(R.layout.activity_display_translation);
